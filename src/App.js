@@ -1,25 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { Layout } from 'antd';
+import BookList from './BookList';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+
+const { Header, Content, Footer } = Layout;
+
+const App = () => {
+    return (
+        <Layout style={{ minHeight: '100vh' }}>
+            <Header style={{ color: 'white' }}>Bookstore</Header>
+            <Content style={{ padding: '24px' }}>
+                <BookList />
+            </Content>
+            <Footer style={{ textAlign: 'center' }}>Bookstore ©2024</Footer>
+        </Layout>
+    );
+};
 
 export default App;
